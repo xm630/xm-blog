@@ -11,29 +11,30 @@
 
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
-  --color-primary-50: oklch(0.971 0.014 343.198);
-  --color-primary-100: oklch(0.948 0.028 342.258);
-  --color-primary-200: oklch(0.899 0.061 343.231);
-  --color-primary-300: oklch(0.823 0.12 346.018);
-  --color-primary-400: oklch(0.718 0.202 349.761);
-  --color-primary-500: oklch(0.656 0.241 354.308);
-  --color-primary-600: oklch(0.592 0.249 0.584);
-  --color-primary-700: oklch(0.525 0.223 3.958);
-  --color-primary-800: oklch(0.459 0.187 3.815);
-  --color-primary-900: oklch(0.408 0.153 2.432);
-  --color-primary-950: oklch(0.284 0.109 3.907);
 
-  --color-gray-50: oklch(0.985 0.002 247.839);
-  --color-gray-100: oklch(0.967 0.003 264.542);
-  --color-gray-200: oklch(0.928 0.006 264.531);
-  --color-gray-300: oklch(0.872 0.01 258.338);
-  --color-gray-400: oklch(0.707 0.022 261.325);
-  --color-gray-500: oklch(0.551 0.027 264.364);
-  --color-gray-600: oklch(0.446 0.03 256.802);
-  --color-gray-700: oklch(0.373 0.034 259.733);
-  --color-gray-800: oklch(0.278 0.033 256.848);
-  --color-gray-900: oklch(0.21 0.034 264.665);
-  --color-gray-950: oklch(0.13 0.028 261.692);
+    /* 主色系重构为更浅的牛油果绿阶梯 */
+--color-primary-50: oklch(0.98 0.03 145); /* 最浅 */
+--color-primary-100: oklch(0.95 0.05 145);
+--color-primary-200: oklch(0.90 0.08 145);
+--color-primary-300: oklch(0.85 0.10 145);
+--color-primary-400: oklch(0.80 0.12 145); /* 基准色#87A96B对应 */
+--color-primary-500: oklch(0.75 0.15 145);
+--color-primary-600: oklch(0.70 0.18 145);
+--color-primary-700: oklch(0.65 0.20 145);
+--color-primary-800: oklch(0.60 0.22 145);
+--color-primary-900: oklch(0.55 0.25 145); /* 最深 */
+
+  /* 灰色系适配象牙白背景 */
+  --color-gray-50: #FCFCFA; /* 超浅象牙 */
+  --color-gray-100: #F5F5E6; /* 基准象牙白 */
+  --color-gray-200: #E8E8DA;
+  --color-gray-300: #DCDCCE;
+  --color-gray-400: #B8B8A3; /* 辅助色 */
+  --color-gray-500: #9C9C87;
+  --color-gray-600: #80806B;
+  --color-gray-700: #646450;
+  --color-gray-800: #3E4A2F; /* 深文本色 */
+  --color-gray-900: #2B2A27; /* 暗黑模式背景 */
 
   /* Line heights */
   --line-height-11: 2.75rem;
@@ -66,14 +67,14 @@
 
   a,
   button {
-    outline-color: var(--color-primary-500);
+    outline-color: var(--color-primary-400);
   }
 
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid;
     border-radius: var(--radius-sm);
-    outline-color: var(--color-primary-500);
+    outline-color: var(--color-primary-400);
   }
 }
 
@@ -132,4 +133,22 @@ input:-webkit-autofill:focus {
 .linkicon {
   display: inline-block;
   vertical-align: middle;
+}
+
+
+/* 基础元素颜色覆盖 */
+@layer base {
+  * {
+    border-color: #B8B8A3; /* 统一边框为辅助色 */
+  }
+
+  .bg {
+    color: #FF0000;
+  }
+
+  /* 聚焦环使用暖橙色 */
+  a:focus-visible,
+  button:focus-visible {
+    outline-color: #E8A87C;
+  }
 }

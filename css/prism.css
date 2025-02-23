@@ -50,15 +50,24 @@
  * Ported by Sara vieria [@SaraVieira]
  * Added by Souvik Mandal [@SimpleIndian]
  */
+/* 更新注释类颜色与自然色调融合 */
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: rgb(99, 119, 119);
+  color: #B8B8A3; /* 旧书页灰 */
   font-style: italic;
 }
 
+/* 标点符号适配牛油果绿衍生色 */
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: #6A8DAA; /* 主色低饱和变体 */
+}
+
+/* 关键词使用牛油果绿活力色 */
+.token.keyword,
+.token.tag,
+.token.operator {
+  color: #87A96B; /* 主色 */
 }
 
 .namespace {
@@ -82,18 +91,18 @@
 }
 
 .token.boolean {
-  color: rgb(255, 88, 116);
+  color: #FFA726; /* 提高警示性 */
 }
-
+/* 数字与布尔值增强对比度 */
 .token.number {
-  color: rgb(247, 140, 108);
+  color: #9DBF88; /* 主色浅变体 */
 }
 
 .token.constant,
 .token.function,
 .token.builtin,
 .token.char {
-  color: rgb(130, 170, 255);
+  color: #3E4A2F;
 }
 
 .token.selector,
@@ -108,12 +117,17 @@
   font-style: italic;
 }
 
-.token.string,
-.token.url,
+
 .token.entity,
 .language-css .token.string,
 .style .token.string {
   color: rgb(173, 219, 103);
+}
+
+/* 字符串使用暖橙色点缀 */
+.token.string,
+.token.url {
+  color: #E8A87C;
 }
 
 .token.class-name,
@@ -121,6 +135,8 @@
 .token.attr-value {
   color: rgb(255, 203, 139);
 }
+
+
 
 .token.regex,
 .token.important,
@@ -139,4 +155,15 @@
 
 .token.table {
   display: inline;
+}
+
+
+/* 高亮行样式与背景协调 */
+.highlight-line {
+  @apply border-l-4 border-[#87A96B] bg-[#F5F5E6]/30; /* 主色边框+象牙白透明背景 */
+}
+
+/* 行号颜色弱化处理 */
+.line-number::before {
+  color: #B8B8A3;
 }

@@ -8,9 +8,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('--color-primary-500'),
+              color: theme('--color-primary-400'),
               '&:hover': {
-                color: theme('--color-primary-600'),
+                color: theme('--color-primary-500'),
               },
               code: { color: theme('--color-primary-400') },
             },
@@ -22,21 +22,21 @@ module.exports = {
               fontWeight: '600',
             },
             code: {
-              color: theme('--color-indigo-500'),
+              color: theme('--color-primary-400'),
             },
           },
         },
         invert: {
           css: {
             a: {
-              color: theme('--color-pink-500'),
+              color: theme('--color-primary-400'),
               '&:hover': {
-                color: theme('--color-primary-400'),
+                color: theme('--color-primary-500'),
               },
               code: { color: theme('--color-primary-400') },
             },
             'h1,h2,h3,h4,h5,h6': {
-              color: theme('--color-gray-100'),
+              color: theme('--color-gray-200'),
             },
           },
         },
