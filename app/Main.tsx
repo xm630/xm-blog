@@ -11,12 +11,10 @@ export default function Home({ posts }) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-2xl leading-9 font-extrabold tracking-tight text-primary-400 sm:text-2xl sm:leading-10 md:text-2xl md:leading-14 dark:text-primary-400">
+          <h1 className="text-primary-400 dark:text-primary-400 text-2xl leading-9 font-extrabold tracking-tight sm:text-2xl sm:leading-10 md:text-2xl md:leading-14">
             {siteMetadata.description}
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          最近更新
-          </p>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">最近更新</p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && '没有任何文章'}

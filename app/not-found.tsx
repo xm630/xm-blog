@@ -9,9 +9,7 @@ export default function NotFound() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl leading-normal font-bold md:text-2xl">
-          呀！没这页面
-        </p>
+        <p className="mb-4 text-xl leading-normal font-bold md:text-2xl">呀！没这页面</p>
         <p className="mb-8">去主页看吧</p>
         <Link
           href="/"
